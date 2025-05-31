@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Formulário de Comentário</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #fff;
+            margin: 0;
+            padding: 0;
+        }
+        h1 {
+            color: #333;
+        }
+        label {
+            display: block;
+        }
+        form {
+            padding-left: 20px;
+        }
+        input[type="text"],
+        input[type="email"],
+        input[type="website"],
+        textarea {
+            width: 90%;
+            padding: 10px;
+            border: 1px solid black;
+            border-radius: 4px;
+        }
+        button {
+            background-color: #ccc;
+            border: 1px solid black;
+            color: black;
+            padding: 10px 15px;
+            border-radius: 4px;
+            cursor: pointer;
+            box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1);
+        }
+        button:hover {
+            background-color: #218838;
+        }
+    </style>
+</head>
+<body>  
+    <form action="/submit_comment" method="POST">
+        <h1>Deixe um comentário</h1>
+        <label for="nome">Nome:</label>
+        <input type="text" id="nome" name="nome" required>
+
+        <label for="email">E-mail:</label>
+        <input type="email" id="email" name="email" required>
+
+        <label for="website">Website:</label>
+        <input type="website" id="website" name="website" required>
+
+        <label for="comentario">Comentário:</label>
+        <textarea id="comentario" name="comentario" rows="4" cols="50" required></textarea>
+
+        <h4><strong>Observação: </strong>Seu comentário será publicado após passar pelo moderador</h4>
+        <button type="submit">Enviar Comentário</button>
+    </form>
+</body>
+</html>

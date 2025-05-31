@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Formulário de Cadastro</title>
+    <style>
+        .celula-azul-claro {
+            background-color: lightblue;
+            color: black;
+        }
+        .celula-azul-escuro {
+            background-color: darkblue;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <h1>Formulário de Cadastro</h1>
+    <form action="/submit_registration" method="POST">
+        <table>
+            <tr>
+                <td class="celula-azul-claro">Não é associado? Faça seu cadastro</td>
+                <td class="celula-azul-escuro">Cadastro</td>
+            </tr>
+            <tr>
+                <td><label for="nome">Nome:</label></td>
+                <td><input type="text" id="nome" name="nome" required></td>
+            </tr>
+            <tr>
+                <td><label for="email">E-mail:</label></td>
+                <td><input type="email" id="email" name="email" required></td>
+            </tr>
+            <tr>
+                <td><label for="uf">UF:</label></td>
+                <td>
+                    <select id="uf" name="uf" required>
+                        <option value="AC">Acre</option>
+                        <option value="AL">Alagoas</option>
+                        <option value="AP">Amapá</option>
+                        <option value="AM">Amazonas</option>
+                        <option value="BA">Bahia</option>
+                        <option value="CE">Ceará</option>
+                        <option value="DF">Distrito Federal</option>
+                        <option value="ES">Espírito Santo</option>
+                        <option value="GO">Goiás</option>
+                        <option value="MA">Maranhão</option>
+                        <option value="MT">Mato Grosso</option>
+                        <option value="MS">Mato Grosso do Sul</option>
+                        <option value="MG">Minas Gerais</option>
+                        <option value="PA">Pará</option>
+                        <option value="PB">Paraíba</option>
+                        <option value="PR">Paraná</option>
+                        <option value="PE">Pernambuco</option>
+                        <option value="PI">Piauí</option>
+                        <option value="RJ">Rio de Janeiro</option>
+                        <option value="RN">Rio Grande do Norte</option>
+                        <option value="RS">Rio Grande do Sul</option>
+                        <option value="RO">Rondônia</option>
+                        <option value="RR">Roraima</option>
+                        <option value="SC">Santa Catarina</option>
+                        <option value="SP">São Paulo</option>
+                        <option value="SE">Sergipe</option>
+                        <option value="TO">Tocantins</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td><label for="estado_civil">Estado Civil:</label></td>
+                <td>
+                    <select id="estado_civil" name="estado_civil" required>
+                        <option value="solteiro">Solteiro</option>
+                        <option value="casado">Casado</option>
+                        <option value="viuvo">Viúvo</option>
+                        <option value="divorciado">Divorciado</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td><label for="senha">Senha:</label></td>
+                <td><input type="password" id="senha" name="senha" required></td>
+            </tr>
+        </table>
+        <button type="submit">Cadastrar</button>
+    </form>
+</body>
+</html>
