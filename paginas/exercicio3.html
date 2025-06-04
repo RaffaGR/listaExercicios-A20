@@ -3,37 +3,42 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Formulário de Dados Pessoais</title>
+    <title>Detalhes Pessoais</title>
+    <link rel="stylesheet" href="../estilos/e3.css">
 </head>
 <body>
-    <h1>Formulário de Dados Pessoais</h1>
-    <form action="/action_page.php">
-        <label for="fname">Nome:</label><br>
-        <input type="text" id="fname" name="fname"><br><br>
 
-        <label for="lname">Sobrenome:</label><br>
-        <input type="text" id="lname" name="lname"><br><br>
+    <section class="personal-details-container">
+        <fieldset class="fieldset-personal-details">
+            <legend>Dados pessoais</legend>
 
-        <label for="email">E-mail:</label><br>
-        <input type="email" id="email" name="email"><br><br>
+            <section class="details-columns">
+                <fieldset class="fieldset-column">
+                    <legend>Detalhes do endereço</legend>
+                    <article class="form-group">
+                        <label for="city">Cidade:</label>
+                        <input type="text" id="city" name="city">
+                    </article>
+                    <article class="form-group">
+                        <label for="zip_code">CEP:</label>
+                        <input type="text" id="zip_code" name="zip_code">
+                    </article>
+                </fieldset>
 
-        <label for="gender">Sexo:</label><br>
-        <input type="radio" id="male" name="gender" value="male">
-        <label for="male">Masculino</label><br>
-        <input type="radio" id="female" name="gender" value="female">
-        <label for="female">Feminino</label><br><br>
+                <fieldset class="fieldset-column">
+                    <legend>Detalhes do telefone</legend>
+                    <article class="form-group">
+                        <label for="home_phone">Lar doce lar:</label>
+                        <input type="tel" id="home_phone" name="home_phone">
+                    </article>
+                    <article class="form-group">
+                        <label for="cell_phone">Celular:</label>
+                        <input type="tel" id="cell_phone" name="cell_phone">
+                    </article>
+                </fieldset>
+            </section>
+        </fieldset>
+    </section>
 
-        <label for="country">País:</label><br>
-        <select id="country" name="country">
-            <option value="brazil">Brasil</option>
-            <option value="usa">Estados Unidos</option>
-            <option value="uk">Reino Unido</option>
-        </select><br><br>
-
-        <label for="bio">Biografia:</label><br>
-        <textarea id="bio" name="bio" rows="4" cols="50"></textarea><br><br>
-
-        <input type="submit" value="Enviar">
-    </form>
 </body>
 </html>

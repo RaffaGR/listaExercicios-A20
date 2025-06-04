@@ -2,30 +2,86 @@
 <html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
-    <title>Tabela de Análise Matemática</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tabela de Notas</title>
+    <style>
+        body {
+            font-family: 'Times New Roman', Times, serif;
+            margin: 20px;
+            color: #000;
+            background-color: #fff;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        section {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        table {
+            border: 2px solid #7f7f7f;
+        }
+        th, td {
+            border: 1px solid #7f7f7f;
+            padding: 3px 7px;
+            text-align: center; 
+            box-shadow: inset 0px 0 3px black;
+        }
+        thead th {
+            font-weight: bold;
+        }
+        strong {
+            font-weight: bold;
+        }
+    </style>
     <link rel="stylesheet" href="../estilos/tabela.css">
 </head>
 <body>
-    <table>
-        <thead>
-            <tr>
-                <th>Disciplina</th>
-                <th>Professor</th>
-                <th>Horário</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <td>Análise 1</td>
-                <td>Prof. João</td>
-                <td>Segunda, 10h</td>
-            </tr>
-            <tr>
-                <td>Análise 2</td>
-                <td>Prof. Maria</td>
-                <td>Quarta, 14h</td>
-            </tr>
-        </tbody>
-    </table>
+    <section>
+        <h1>Disciplina de Análise Matemática</h1>
+        <h2>Notas de 1999/2000</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Aluno</th>
+                    <th>Frequência</th>
+                    <th>1ª Chamada</th>
+                    <th>2ª Chamada</th>
+                    <th>Final</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Ana Maria</td>
+                    <td>12.5</td>
+                    <td>14.2</td>
+                    <td></td>
+                    <td><strong>14</strong></td>
+                </tr>
+                <tr>
+                    <td>João</td>
+                    <td>11.5</td>
+                    <td>12.2</td>
+                    <td></td>
+                    <td><strong>13</strong></td>
+                </tr>
+                <tr>
+                    <td>Rui Manuel</td>
+                    <td>12.5</td>
+                    <td>13.2</td>
+                    <td></td>
+                    <td><strong>13</strong></td>
+                </tr>
+            </tbody>
+            <tfoot>
+                <tr>
+                    <td colspan="4">Média</td>
+                    <td><strong>13.3</strong></td>
+                </tr>
+            </tfoot>
+        </table>
+    </section>
 </body>
 </html>

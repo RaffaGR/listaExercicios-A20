@@ -1,22 +1,86 @@
-table {
-    width: 100%;
-    border-collapse: collapse;
+body {
+    font-family: 'Times New Roman', Times, serif;
+    margin: 20px;
+    color: #000;
+    background-color: #fff;
 }
 
-th, td {
-    border: 1px solid #ddd;
-    padding: 8px;
+section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+h1 {
+    font-size: 1.1em;
+    font-style: italic;
+    font-weight: normal;
+    margin-bottom: 5px;
+    text-align: center;
+}
+
+h2 {
+    font-size: 0.9em;
+    font-weight: normal;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+table {
+    border-collapse: collapse;
+    border: 4px double rgb(161, 161, 161);
+    font-size: 0.9em;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+caption {
+    caption-side: bottom;
+    text-align: center;
+    margin-top: 10px;
+    font-weight: bold;
+    font-size: 0.9em;
+}
+
+th,
+td {
+    border: 2px double #9090c0;
+    padding: 4px 8px;
+    text-align: center;
+}
+
+thead th {
+    background-color: white;
+    color: #0000ff;
+    font-style: italic;
+}
+
+tbody tr td:first-child {
+    background-color: #ffdddd;
+    font-weight: bold;
     text-align: left;
 }
 
-th {
-    background-color: #f2f2f2;
+tbody tr td:nth-child(2),
+tbody tr td:nth-child(3),
+tbody tr td:nth-child(4) {
+    background-color: #ffffaa;
+    color: green;
 }
 
-tr:nth-child(even) {
-    background-color: #f9f9f9;
+tbody tr td:last-child {
+    background-color: #ff0000;
+    color: black;
+    font-weight: bold;
 }
 
-tr:hover {
-    background-color: #ddd;
+tfoot td {
+    background-color: white;
+    color: #0000ff;
+    font-weight: bold;
+}
+
+tfoot td:first-child {
+    font-style: italic;
+    text-align: center;
 }
