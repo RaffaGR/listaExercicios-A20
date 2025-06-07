@@ -3,6 +3,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    transition: all;
 }
 
 /* Estilos gerais */
@@ -23,30 +24,75 @@ header {
 
 /* Estilos do menu de navegação */
 nav {
-    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     margin-top: 20px;
 }
 
 nav ul {
     list-style-type: none;
+    padding: 0;
 }
 
 nav ul li {
-    display: inline;
-    margin: 0 15px;
+    margin: 10px 0;
 }
 
 nav a {
     text-decoration: none;
     color: #4CAF50;
     font-weight: bold;
-    padding: 5px 10px;
+    padding: 10px 20px;
     border: 2px solid #4CAF50;
     border-radius: 5px;
-    transition: background-color 0.3s, color 0.3s;
+    display: inline-block;
+    position: relative;
+    transition: all 0.3s ease;
+    width: 200px; 
+    height: 60px; 
+    line-height: 60px; 
+    text-align: center; 
+    z-index: 1; 
+    background-image: linear-gradient(45deg, #ff00ff, #00ffff, #ff0000, #ffff00, #00ff00);
+    background: #fff;
+    background-size: 400% 400%;
+    animation: holographic 2s linear infinite;
 }
 
+/* Efeito de brilho ao passar o mouse */
 nav a:hover {
-    background-color: #4CAF50;
-    color: white;
+    color: #000;
+    /* background: none; */
+    background-image: linear-gradient(45deg, #ff00ff, #00ffff, #ff0000, #ffff00, #00ff00);
+    border-color: #fff;
+}
+
+nav a.first-aaa {
+    color: #000;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+nav a.first-aaa:hover {
+    background-image: linear-gradient(45deg, #ff00ff, #00ffff, #ff0000, #ffff00, #00ff00);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text; 
+    border-color: transparent; 
+}
+
+
+
+/* Animação do efeito holográfico */
+@keyframes holographic {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
 }
